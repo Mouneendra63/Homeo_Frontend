@@ -12,4 +12,5 @@ export const userValid = z.object({
     .min(10, "Phone number must be at least 10 digits")
     .max(15, "Phone number is too long")
     .regex(/^[0-9]+$/, "Phone number must contain only digits"),
+  isCompleted: z.boolean().optional(),   // ✅ ADD THIS LINE
 }).strict();
